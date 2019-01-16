@@ -1,4 +1,4 @@
-# CS_students_base
+# CS_students_base [![Build Status](https://travis-ci.com/OriaTori/CS_students_base.svg?branch=master)](https://travis-ci.com/OriaTori/CS_students_base)
 #### W grupach 2-3 osobowych napiszcie program, który będzie przechowywał dane o studentach. Wymagania:
 
    - [ ] System budowania (preferowany CMake, ewentualnie Makefile)
