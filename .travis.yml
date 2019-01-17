@@ -1,0 +1,11 @@
+os: linux
+language: cpp
+compiler: 
+  - g++
+  - clang++
+before_script:
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make
+script: ./studentsBase
