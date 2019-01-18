@@ -4,7 +4,7 @@ project(studentsBase)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(SOURCE "${PROJECT_SOURCE_DIR}/src/*.cpp")
+set(SOURCE "${PROJECT_SOURCE_DIR}/src/main.cpp")
 
 include_directories ("${PROJECT_SOURCE_DIR}/include")
 
