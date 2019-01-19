@@ -3,15 +3,15 @@
 class Student
 {
 public:
-    Student() = delete;
-    Student(unsigned int id, string firstN, string lastN):
+    Student() = default;
+    Student(unsigned int id, std::string firstN, std::string lastN):
         index(id),firstName(firstN),lastName(lastN){}; 
-    ~Student();
+    ~Student() = default;
     unsigned int getIndexNumber() const;
-    string getFirstName() const;
-    string getLastName() const;
+    std::string getFirstName() const;
+    std::string getLastName() const;
 private:
     unsigned int index;
-    string firstName;
-    string lastName;
+    std::string firstName;
+    std::string lastName;
 };
