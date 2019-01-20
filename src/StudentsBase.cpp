@@ -21,7 +21,7 @@ void StudentsBase::addStudent(Student* student)
 }
 void StudentsBase::sortByIndexAsc(bool variant)
 {
-    
+    std::sort(studentBase.begin(), studentBase.end());    
 }
 void StudentsBase::removeStudent(const int index)
 {

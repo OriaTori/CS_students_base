@@ -5,14 +5,24 @@
 int main()
 {
     StudentsBase base;
-    Student* student = new Student(200118,"Jan","Kowalski");
-    Student stud(200111,"Piotr","Nowak");
+    Student* student = new Student(200,"Pet","Simson");
+    Student stud(111,"John","Johnson");
     base.addStudent(&stud);
     base.addStudent(student);
+    student = new Student(102,"Ben","Jonhson");
+    base.addStudent(student);
+    student = new Student(222,"John","Smith");
+    base.addStudent(student);
+     
     base.showBase();
-    base.removeStudent(200111);
+    base.sortByIndexAsc(true);
+    std::cout<< "\n After sort "<< std::endl;
+    base.showBase();
+    base.removeStudent(111);
     std::cout << "\n After remove 200111" << std::endl;
     base.sortByIndexAsc(true);
     base.showBase();
+    
+    student = NULL;
     return 0;
 }
