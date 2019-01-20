@@ -1,11 +1,13 @@
+#pragma once
 #include <string>
 
 class Student
 {
 public:
-    Student() = default;
+    Student() = delete;
     Student(unsigned int id, std::string firstN, std::string lastN):
         index(id),firstName(firstN),lastName(lastN){}; 
+    Student(const Student& student); 
     ~Student() = default;
     unsigned int getIndexNumber() const;
     std::string getFirstName() const;

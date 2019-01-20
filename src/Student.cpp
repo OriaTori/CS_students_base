@@ -1,14 +1,20 @@
 #include "../include/Student.hpp"
 
-unsigned int Student::getIndexNumber()
+Student::Student(const Student& student)
+{
+    index = student.getIndexNumber();
+    firstName = student.getFirstName();
+    lastName = student.getLastName();
+}
+unsigned int Student::getIndexNumber() const
 {
     return index;
 }
-string Student::getFirstName()
+std::string Student::getFirstName() const
 {
     return firstName;
 }
-string Student::getLastName()
+std::string Student::getLastName() const
 {
     return lastName;
 }
