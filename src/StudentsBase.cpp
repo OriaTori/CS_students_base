@@ -18,9 +18,9 @@ void StudentsBase::addStudent(Student* student)
 {
     studentBase.push_back(*student);
 }
-void StudentsBase::sortByIndexAsc(bool variant)
+void StudentsBase::sortByIndexAsc()
 {
-
+	std::sort(studentBase.begin(), studentBase.end());
 }
 void StudentsBase::removeStudent(int index)
 {
