@@ -24,7 +24,13 @@ void StudentsBase::sortByIndexAsc(bool variant)
 }
 void StudentsBase::removeStudent(int index)
 {
-
+    void StudentsBase::removeStudent(int index)
+        {
+            if(index < studentBase.size())
+            {studentBase.erase(studentBase.begin() + index);
+            }else
+            std::cout << "Index is out of bound";
+        }
 }
 
 
