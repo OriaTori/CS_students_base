@@ -10,5 +10,9 @@ int main()
     base.addStudent(&stud);
     base.addStudent(student);
     base.showBase();
+    base.removeStudent(200111);
+    std::cout << "\n After remove 200111" << std::endl;
+    base.sortByIndexAsc(true);
+    base.showBase();
     return 0;
 }
