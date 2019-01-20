@@ -6,7 +6,7 @@ class StudentsBase
 {
 public:
     void addStudent(Student* student);
-    void sortByIndexAsc(bool variant);
+    void sortByIndexAsc();
     void removeStudent(int index);
     void showBase();
 private:
