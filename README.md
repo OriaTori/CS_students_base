@@ -8,4 +8,4 @@ Requirements:
 - [ ] Sorting by index number
 - [ ] Removing using an index number
 
-ATTENTION: Here the emphasis is on group work. Each person in the group must commit something. The program will be further developed in the future. TNow the most important thing is to organize yourself, divide your work and commit to a shared repository. Remember about MVP (Minimal Viable Product).
+ATTENTION: Here the emphasis is on group work. Each person in the group must commit something. The program will be further developed in the future. Now the most important thing is to organize yourself, divide your work and commit to a shared repository. Remember about MVP (Minimal Viable Product).
