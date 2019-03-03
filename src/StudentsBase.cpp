@@ -5,18 +5,18 @@ void StudentsBase::showBase()
 {
     if(studentBase.empty() != true)
     {
-        for(const Student& student : studentBase)
+        for(const auto & student : studentBase)
         {
-            std::cout<< " First name: "<< student.getFirstName();
-            std::cout<< " Last name: "<< student.getLastName();
-            std::cout<< " Index: "<< student.getIndexNumber() << std::endl;
+            std::cout<< " First name: "<< student->getFirstName();
+            std::cout<< " Last name: "<< student->getLastName();
+            std::cout<< " Index: "<< student->getIndexNumber() << std::endl;
         }
     }else
         std::cout<< "Empty students base" << std::endl;
 }
-void StudentsBase::addStudent(Student* student)
+void StudentsBase::addStudent(std::unique_ptr<Student> student)
 {
-    studentBase.push_back(*student);
+    studentBase.emplace_back(std::move(student));
 }
 void StudentsBase::sortByIndexAsc(bool variant)
 {

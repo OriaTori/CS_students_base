@@ -6,9 +6,10 @@ int main()
 {
     StudentsBase base;
     Student* student = new Student(200118,"Jan","Kowalski");
-    Student stud(200111,"Piotr","Nowak");
-    base.addStudent(&stud);
-    base.addStudent(student);
+    std::unique_ptr<Student> stud(new Student(200111,"Piotr","Nowak"));
+    base.addStudent(std::move(stud));
+    base.addStudent(std::move(std::make_unique<Student>(*student)));
     base.showBase();
+    delete student;
     return 0;
 }
