@@ -12,6 +12,13 @@ public:
     unsigned int getIndexNumber() const;
     std::string getFirstName() const;
     std::string getLastName() const;
+
+    bool operator==(const Student& student) const;
+    bool operator!=(const Student& student) const;
+    bool operator<(const Student& student) const;
+    bool operator>(const Student& student) const;
+    bool operator<=(const Student& student) const;
+    bool operator>=(const Student& student) const;
 private:
     unsigned int index;
     std::string firstName;
