@@ -19,15 +19,15 @@ void StudentsBase::addStudent(std::unique_ptr<Student> student)
 {
     studentBase.emplace_back(std::move(student));
 }
-void StudentsBase::sortByIndexAsc(bool variant)
+void StudentsBase::sortByIndexAsc()
 {
     std::sort(studentBase.begin(), studentBase.end());    
 }
-void StudentsBase::removeStudent(const int index)
+void StudentsBase::removeStudent(const unsigned int index)
 {
-    auto studentToRemove = std::find_if(studentBase.begin(), studentBase.end(),[&index](const Student& student)->bool
+    auto studentToRemove = std::find_if(studentBase.begin(), studentBase.end(),[&index](std::unique_ptr<Student>& student)
             {
-                return (student.getIndexNumber() == index) ? true : false;
+                return (student->getIndexNumber() == index) ? true : false;
             });
     studentBase.erase(studentToRemove);
 

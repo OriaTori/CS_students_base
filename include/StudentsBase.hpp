@@ -7,8 +7,8 @@ class StudentsBase
 {
 public:
     void addStudent(std::unique_ptr<Student> student);
-    void sortByIndexAsc(bool variant);
-    void removeStudent(const int index);
+    void sortByIndexAsc();
+    void removeStudent(const unsigned int index);
     void showBase();
 private:
     std::vector<std::unique_ptr<Student>> studentBase;    
