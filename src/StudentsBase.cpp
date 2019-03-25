@@ -1,5 +1,6 @@
 #include "../include/StudentsBase.hpp"
 #include <iostream>
+#include <algorithm>
 
 void StudentsBase::showBase()
 {
@@ -20,10 +21,15 @@ void StudentsBase::addStudent(std::unique_ptr<Student> student)
 }
 void StudentsBase::sortByIndexAsc(bool variant)
 {
-
+    std::sort(studentBase.begin(), studentBase.end());    
 }
-void StudentsBase::removeStudent(int index)
+void StudentsBase::removeStudent(const int index)
 {
+    auto studentToRemove = std::find_if(studentBase.begin(), studentBase.end(),[&index](const Student& student)->bool
+            {
+                return (student.getIndexNumber() == index) ? true : false;
+            });
+    studentBase.erase(studentToRemove);
 
 }
 

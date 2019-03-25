@@ -18,3 +18,28 @@ std::string Student::getLastName() const
 {
     return lastName;
 }
+
+bool Student::operator==(const Student& student) const
+{
+    return this->getIndexNumber() == student.getIndexNumber();
+}
+bool Student::operator!=(const Student& student) const
+{
+    return this->getIndexNumber() != student.getIndexNumber();
+}
+bool Student::operator<(const Student& student) const
+{
+    return this->getIndexNumber() < student.getIndexNumber();
+}
+bool Student::operator>(const Student& student) const
+{
+    return this->getIndexNumber() > student.getIndexNumber();
+}
+bool Student::operator<=(const Student& student) const
+{
+    return this->getIndexNumber() <= student.getIndexNumber();
+}
+bool Student::Student::operator>=(const Student& student) const
+{
+    return this->getIndexNumber() >= student.getIndexNumber();
+}
